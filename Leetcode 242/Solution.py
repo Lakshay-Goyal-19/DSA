@@ -6,10 +6,12 @@ class Solution:
                 d[s[i]]=1
             else:
                 d[s[i]]+=1
-        for i in range(len(t)):
-            if t[i] not in d:
-                return False
+        for j in range(len(t)):
+            if t[j] in d:
+                d[t[j]]-=1
             else:
-                d[s[i]]-=1
+                return False
+        for value in d.values():
+            if value!=0:
+                return False
         return True
-       

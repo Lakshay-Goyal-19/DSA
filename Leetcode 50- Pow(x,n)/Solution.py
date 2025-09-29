@@ -20,8 +20,8 @@ class Solution:
         while(n > 0):
             if(n % 2 == 1):
                 ans *= x
-            x *= x
-            n = n//2
+            x *= x #Squaring the base
+            n = n // 2 #Reduce power by half
         return ans
 
             
